@@ -9,12 +9,10 @@ class Solution:
         y = 0
         directions = [[0,1], [1,0], [0,-1], [-1,0]]
         idx = 0
-        check = {}
+        check = set()
         for obs in obstacles:
-            check[tuple(obs)] = None
+            check.add(tuple(obs))
         output = 0
-
-        print(check)
 
         for command in commands:
             if command == -2:
